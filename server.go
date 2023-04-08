@@ -4,11 +4,12 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"server/handlers"
 )
 
 const PORT = 8080
 
-var handlerMap = map[string]func(http.ResponseWriter, *http.Request){"/hello": handleHello}
+var handlerMap = map[string]func(http.ResponseWriter, *http.Request){"/hello": handlers.HandleHello}
 
 func main() {
 	for handle, function := range handlerMap {
