@@ -9,7 +9,7 @@ import (
 
 const PORT = 8080
 
-var handlerMap = map[string]func(http.ResponseWriter, *http.Request){"/hello": handlers.HandleHello}
+var handlerMap = map[string]func(http.ResponseWriter, *http.Request){"/move": handlers.HandleMove}
 
 func main() {
 	for handle, function := range handlerMap {
